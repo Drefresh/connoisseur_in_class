@@ -25,7 +25,11 @@ class HtmlGenerator
   private
 
   def display_product(product)
-    puts "<p>#{product['name']}</p>"
+    puts "<p><h3>#{product['name']}</h3></p>"
+    puts "<p>$#{product['regular_price_in_cents']/100}</p>"
+    puts "<img src='#{product['image_thumb_url']}'>"
+    puts "<p>#{product['producer_name']}</p>"
+    puts "<p>#{product['package']}</p>"
   end
 
   def print_header
